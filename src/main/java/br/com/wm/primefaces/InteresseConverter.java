@@ -22,7 +22,7 @@ public class InteresseConverter implements Converter {
 
 	@Override
 	public String getAsString(FacesContext context, UIComponent component, Object value) {
-		if (value != null) {
+		if (value != null && !value.equals("")) {
 			Interesse interesse = (Interesse) value;
 			return interesse.getNomeIcone();
 		}
